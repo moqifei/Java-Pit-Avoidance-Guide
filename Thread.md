@@ -31,7 +31,7 @@ try{
 
    实线代表强引用,虚线代表弱引用.
 
-![https://github.com/moqifei/Java-Pit-Avoidance-Guide/blob/main/pic/91ef76c6a7efce1b563edc5501a900dbb58f6512.jpeg]
+![image](https://github.com/moqifei/Java-Pit-Avoidance-Guide/blob/main/pic/91ef76c6a7efce1b563edc5501a900dbb58f6512.jpeg)
 
 由于ThreadLocalMap的key是弱引用，而Value是强引用。这就导致了一个问题，ThreadLocal在没有外部对象强引用时，发生GC时弱引用Key会被回收，而Value不会回收，如果创建ThreadLocal的线程一直持续运行，那么这个Entry对象中的value就有可能一直得不到回收，发生内存泄露。
 
@@ -153,7 +153,7 @@ class Data {
 
 能力进阶：当线程获取锁失败时如何安全的加入同步等待队列
 
-![https://github.com/moqifei/Java-Pit-Avoidance-Guide/blob/main/pic/1422237-20180805184052040-1494856465.png]
+![image](https://github.com/moqifei/Java-Pit-Avoidance-Guide/blob/main/pic/1422237-20180805184052040-1494856465.png)
 
 - 1.队列为空的情况:
   因为队列为空,故head=tail=null,假设线程执行2成功,则在其执行3之前,因为tail=null,其他进入该方法的线程因为head不为null将在2处不停的失败,所以3即使没有同步也不会有线程安全问题。
