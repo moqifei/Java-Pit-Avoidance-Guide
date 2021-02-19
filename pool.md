@@ -18,7 +18,7 @@
 
 3.非连接池的 API：一般命名为 XXXConnection，以区分其是基于连接池还是单连接的，而不建议命名为 XXXClient 或直接是 XXX。直接连接方式的 API 基于单一连接，每次使用都需要创建和断开连接，性能一般，且通常不是线程安全的。
 
-![1685d9db2602e1de8483de171af6fd7e](E:\存款PGM\传帮带\pool\1685d9db2602e1de8483de171af6fd7e.png)
+![image](https://github.com/moqifei/Java-Pit-Avoidance-Guide/blob/main/pic/1685d9db2602e1de8483de171af6fd7e.png)
 
 ## 禁止通过Jedis直连Redis，使用try-with-resources 模式从 JedisPool 获得和归还 Jedis 实例，并建议通过shutdownhook，优雅关闭JedisPool
 
@@ -88,7 +88,7 @@ public String right() {
 
 常用连接池对别：
 
-![连接池](E:\存款PGM\传帮带\pool\连接池.png)
+![image](https://github.com/moqifei/Java-Pit-Avoidance-Guide/blob/main/pic/%E8%BF%9E%E6%8E%A5%E6%B1%A0.png)
 
 druid配置详解：
 
